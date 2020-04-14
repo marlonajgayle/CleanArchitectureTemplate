@@ -33,7 +33,8 @@ namespace CleanArchitectureTemplate.Api
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureAppConfiguration((hostingContext, config) => {
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
 
                     var env = hostingContext.HostingEnvironment;
 

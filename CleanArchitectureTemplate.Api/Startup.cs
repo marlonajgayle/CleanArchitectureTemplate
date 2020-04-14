@@ -1,4 +1,5 @@
 using CleanArchitectureTemplate.Api.ConfigOptions;
+using CleanArchitectureTemplate.Api.Filters;
 using CleanArchitectureTemplate.Application;
 using CleanArchitectureTemplate.Application.HealthChecks;
 using CleanArchitectureTemplate.Infrastructure;
@@ -57,7 +58,7 @@ namespace CleanArchitectureTemplate.Api
                 swagger.IncludeXmlComments(xmlPath);
             });
 
-            
+
 
             // Register InvestEdge.Application Service Configurations
             services.AddApplication();
@@ -76,6 +77,8 @@ namespace CleanArchitectureTemplate.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCustomExceptionHandler();
 
             // Enable Middelware to serve generated Swager as JSON endpoint
             var swaggerOptions = new SwaggerOptions();

@@ -2,7 +2,7 @@
 
 namespace CleanArchitectureTemplate.Application.Clients.Commands.CreateClient
 {
-    public class CreateClientCommand :IRequest<int>
+    public class CreateClientCommand : IRequest<int>
     {
         public long ClientId { get; set; }
         public string FirstName { get; set; }
