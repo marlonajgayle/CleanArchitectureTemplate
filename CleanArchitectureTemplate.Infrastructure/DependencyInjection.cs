@@ -18,7 +18,7 @@ namespace CleanArchitectureTemplate.Infrastructure
             // Register Services 
             services.AddTransient<IMailService, MailService>();
 
-            services.AddDbContextPool<InvestEdgeDbContext>(
+            services.AddDbContext<InvestEdgeDbContext>(
                 options => options.UseSqlServer(configuration.GetConnectionString("InvestEdgeDbConnection")));
 
             services.AddScoped<IInvestEdgeDbContext>(provider => provider.GetService<InvestEdgeDbContext>());
