@@ -78,7 +78,7 @@ namespace CleanArchitectureTemplate.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCustomExceptionHandler();
+            
 
             // Enable Middelware to serve generated Swager as JSON endpoint
             var swaggerOptions = new SwaggerOptions();
@@ -118,6 +118,7 @@ namespace CleanArchitectureTemplate.Api
                 }
             });
 
+            app.UseCustomExceptionHandler();
             app.UseHttpsRedirection();
 
             app.UseRouting();
